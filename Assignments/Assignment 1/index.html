@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rabin Acharya</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <img src="images/backgroundtop.png" alt="" class="background bg-top">
+    
+    <div class="container">
+        <header>
+            <a href="" class="logo">
+                <img src="images/logo.png" alt="Rabin Acharya" class="logo_img">
+            </a>
+            <nav>
+                <a href="#" class="hide-desktop">
+                    <img src="images/ham.png" alt="toggle menu" class="menu" id="menu">
+                </a>
+                <ul class="show-desktop hide-mobile" id="nav">
+                    <li id="exit" class="exit-btn hide-desktop"><img src="images/exit.png" alt="exit menu" class="exit"></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">portfolio</a></li>
+                    <li><a href="#">contact</a></li>
+
+                </ul>
+            </nav>
+        </header>
+
+        <section id="info-container">
+            <img src="images/myImage.png" alt="Rabin Acharya" class="myImage">
+            <div class="info">
+                <p class="subhead">Hello</p>
+                <h1>I'm Rabin Acharya</h1>
+                <p class="subhead">UI/UX Designer, also passionate in making vectors, logos, illustrations and icons</p>
+                <button class="hire-btn">Hire Me</button>
+            </div>
+            
+        </section>
+        <img src="images/backgroundbot.png" alt="" class="background bg-bot">
+
+        <section id="about" class="about">
+            
+            <h1 class="abt-head">About Me</h1>
+
+            <div class="abt one">
+                <h3 class="abt">Life</h3>
+                <p class="subhead abt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, ut repudiandae debitis et consequatur nobis est dolor!</p>
+            </div>
+
+            <div class="abt two">
+                <h3 class="abt">Education</h3>
+                <p class="subhead abt">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam mollitia a consequatur corporis ipsa commodi ipsum laudantium voluptatum ea! Autem!
+                </p>
+            </div>
+
+            <div class="abt three">
+                <h3 class="abt">Experience</h3>
+                <p class="subhead abt">Cupiditate, ut repudiandae debitis et consequatur nobis est dolor! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos expedita similique tempore eligendi?</p>
+            </div>
+
+        </section>
+        
+
+    </div>
+
+    <section id="services">
+        <div class="container">
+            <h1 class="service-head">Services</h1>
+            <ul>
+                <li class="service-li">
+                    <img src="images/service1.svg" alt="" class="service-icon">
+                    <h2>Web Design</h2>
+                    <p class="ser subhead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut modi voluptates deserunt, iusto aperiam adipisci perspiciatis nulla hic! Quam, dolorum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, ipsa?</p>
+                </li>
+                <li class="service-li">
+                    <img src="images/service2.svg" alt="" class="service-icon">
+                    <h2>Illustrations</h2>
+                    <p class="ser subhead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut modi voluptates deserunt, iusto aperiam adipisci perspiciatis nulla hic! Quam, dolorum!</p>
+                </li>
+                <li class="service-li">
+                    <img src="images/service3.svg" alt="" class="service-icon">
+                    <h2>UI/Ux Design</h2>
+                    <p class="ser subhead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut modi voluptates deserunt, iusto aperiam adipisci perspiciatis nulla hic! Quam, dolorum!</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <script type="text/javascript" src="js/vanilla-tilt.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelector(".myImage"), {
+            max: 20,
+            speed: 10000,
+            glare: true,
+            "max-glare": 1,
+            gyroscope: true,
+            gyroscopeMinAngleX: -45,
+            gyroscopeMaxAngleX: 45,
+            gyroscopeMinAngleY: -45,
+            gyroscopeMaxAngleY: 45,
+        });
+    </script>
+</body>
+</html>
