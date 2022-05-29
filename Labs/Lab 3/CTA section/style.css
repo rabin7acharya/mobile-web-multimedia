@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600;8..144,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto Flex', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: #f3f4f6;
+}
+
+.wrapper {
+    margin: auto;
+    text-align: center;
+    width: 800px;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 8px;
+}
+
+h1 {
+    font-size: 50px;
+    color: #374151;
+}
+
+.buttons {
+    margin-top: 50px;
+}
+
+a {
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+}
+
+.buy__btn {
+    color: #fff;
+    background-color: #2663eb;
+}
+
+.start__btn {
+    color: #374151;
+    border: 1px solid #cfcfcf;
+    margin-left: 8px;
+}

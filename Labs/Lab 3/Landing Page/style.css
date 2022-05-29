@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.nav__bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.nav__items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav__bar ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 20px 40px;
+}
+
+.nav__bar ul li a,
+.contact__btn {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2em;
+}
+
+.contact__btn {
+    border: 1px solid #00000044;
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+.hero__section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    height: 90vh;
+}
+
+.hero__img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.right {
+    width: 80%;
+}
+
+.left {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 450px;
+}
+
+.header {
+    font-size: 4em;
+    font-weight: 900;
+}
+
+svg {
+    width: 30px;
+    color: blueviolet;
+    margin-right: 20px;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+.info__group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 140px;
+}
+
+.info__item {
+    display: flex;
+    align-items: center;
+}
+
+.newsletter {
+    border: 1px solid #00000044;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    width: 500px;
+    padding: 5px;
+}
+
+input {
+    border: none;
+    outline: none;
+    font-size: 1.2em;
+    padding: 0 16px;
+}
+
+.join__btn {
+    text-decoration: none;
+    background-color: blueviolet;
+    color: #fff;
+    font-size: 1.2em;
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+.ham__icon {
+    color: #000;
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .ham__icon {
+        display: inline-block;
+        color: #000;
+    }
+
+    .nav__items {
+        display: none;
+    }
+
+    .hero__section {
+        width: 100%;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .right,
+    .left {
+        width: 80%;
+    }
+
+    .hero__img {
+        width: 100%;
+    }
+
+    .contact__btn {
+        display: none;
+    }
+
+    .newsletter {
+        width: 100%;
+    }
+}
