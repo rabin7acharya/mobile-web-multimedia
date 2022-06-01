@@ -17,8 +17,8 @@
                 streetName: "Street1",
                 streetNo: 200,
 
-                function getAddress() {
-                    let address = employee[0].country + employee[0].city + employee[0].streetName + employee[0].streetNo;
+                getAddress: function () {
+                    return this.country + this.city + this.streetName + this.streetNo;
                 }
             },
             {
@@ -39,6 +39,7 @@
             }
 
         ]
+        console.log(getAddress)
     </script>
 </body>
 </html>
