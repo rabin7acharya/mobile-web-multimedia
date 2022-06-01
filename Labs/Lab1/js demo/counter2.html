@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Counter</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #4f4fa9;
+        }
+
+        .wrapper {
+            width: 500px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        button {
+            padding: 10px 20px;
+            color: #4f4fa9;
+            border-radius: 8px;
+            border: 2px solid #4f4fa9;
+            font-size: 1em;
+            font-weight: bold;
+        }
+        .btns {
+            width: 300px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        button:hover {
+            box-shadow: 1px 1px 10px #4f4fa9;
+        }
+
+        h1 {
+            font-size: 10em;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1 class="value">0</h1>
+        <div class="btns">
+
+            <button class="btn dec">-</button>
+            <button class="btn res">Reset</button>
+            <button class="btn inc">+</button>
+        </div>
+    </div>
+
+    <script>
+        let count = 0;
+        const buttons = document.querySelectorAll("button");
+        const value = document.querySelector(".value")
+        
+        buttons.forEach(function(btn){
+            btn.addEventListener("click", function(e) {
+                const styles = e.currentTarget.classList;
+                // console.log(styles)
+                if(styles.contains("dec")) {
+                    count--;
+                }
+                else if(styles.contains("inc")) {
+                    count++;
+                }
+                else {
+                    count=0;
+                }
+                console.log(count);
+                if(count > 0) {
+                    value.style.color = 'green';
+                }
+                if(count < 0) {
+                    value.style.color = 'red';
+                }
+                if(count == 0) {
+                    value.style.color = '#4f4fa9';
+                }
+                value.textContent = count;
+            })
+        })
+        
+    </script>
+</body>
+</html>
