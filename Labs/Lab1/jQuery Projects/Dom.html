@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <p>Hey</p>
+    <p>Click</p>
+
+    <button id="show">Show</button>
+    <button id="hide">Hide</button>
+    <button id="toggle">Toggle</button>
+    <br /><br />
+    <input type="text" name="username" id="" />
+    <p>Your Username is <span id="display-username"></span></p>
+
+    <select name="select" id="dropdown">
+      <option value="nepal">Nepal</option>
+      <option value="us">U.S.</option>
+      <option value="china">China</option>
+      <option value="uk">U.K.</option>
+    </select>
+    <p>Your Country is <span id="display-country"></span></p>
+
+    <script type="text/javaScript" src="./jQuery3.6.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("p").click(function () {
+          alert("clicked");
+        });
+      });
+
+      $("#show").click(function () {
+        $("p").show();
+      });
+      $("#hide").click(function () {
+        $("p").hide();
+      });
+      $("#toggle").click(function () {
+        $("p").toggle(300);
+      });
+
+      $("input[name=username]").keyup(function (event) {
+        $("#display-username").text(event.target.value);
+      });
+
+      $("#dropdown").change(function (event) {
+        $("#display-country").text(
+          event.target.value + " " + event.target.text
+        );
+        console.log(event.target.text);
+        
+      });
+
+      
+    </script>
+  </body>
+</html>
+ 

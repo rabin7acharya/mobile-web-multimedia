@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="action.html" onsubmit="event.preventDefault()">
+      <p id="errorMessage"></p>
+      <input type="text" name="search" placeholder="Type here to search" />
+      <input type="submit" />
+      <p id="searchResult"></p>
+      <!-- <input type="submit" id="submit" /> -->
+    </form>
+
+    <script>
+      const searchEl = document.querySelector("input[name=search]");
+      const error = document.getElementById("errorMessage");
+      const searchResult = document.getElementById("searchResult");
+
+      searchEl.addEventListener("keyup", function (event) {
+        if (searchEl.value.length < 2) {
+          error.innerText = "Please enter 4 more character to search";
+          searchResult.innerText = "";
+        } else if (searchEl.value.length < 3) {
+          error.innerText = "Please enter 3 more character to search";
+          searchResult.innerText = "";
+        } else if (searchEl.value.length < 4) {
+          error.innerText = "Please enter 2 more character to search";
+          searchResult.innerText = "";
+        } else if (searchEl.value.length < 5) {
+          error.innerText = "Please enter 1 more character to search";
+          searchResult.innerText = "";
+        } else if (searchEl.value.length > 4) {
+          error.style.display = "none";
+          searchResult.innerText = "Finding result for " + searchEl.value;
+        }
+
+        if (event.code == "Enter") {
+          searchResult.innerText =
+            "Showing Result for " + "'" + searchEl.value + "'";
+        }
+
+        console.log(event);
+      });
+    </script>
+  </body>
+</html>

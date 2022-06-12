@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #error-email,
+      #error-password {
+        display: none;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <form id="login-from" action="action.html">
+        <div class="email-sec">
+          <label for="Email">Email</label>
+          <input type="email" name="Email" id="email" />
+          <p id="error-email"></p>
+        </div>
+        <div class="password-sec">
+          <label for="Password">Password</label>
+          <input type="password" name="Password" id="password" />
+          <p id="error-passwrod"></p>
+        </div>
+        <input type="submit" name="submit" id="submit" />
+      </form>
+    </div>
+
+    <script>
+      const form = document.getElementById("login-from");
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const emailEl = document.querySelector("#email");
+        const passwordEl = document.querySelector("#password");
+        const errorEmail = document.querySelector("#error-email");
+        const errorPass = document.querySelector("#error-password");
+
+        if (emailEl.value != "" && passwordEl.value != "") {
+        }
+      });
+    </script>
+  </body>
+</html>

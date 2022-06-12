@@ -1,105 +1,207 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
- body {
-    font-family: 'Poppins', sans-serif;
- }
+body {
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
 
 .nav__bar {
-    padding: 0px 40px;
-    display: flex;
-    justify-content: space-between;
-    box-shadow: 1px 1px 5px #00000044;
+  padding: 0px 40px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 1px 1px 5px #00000044;
+  height: 59px;
+  z-index: 2;
+  /* position: absolute; */
+  /* position: sticky; */
 }
 
 .logo__text {
-    margin-left: 15px;
-    font-weight: 800;
+  margin-left: 15px;
+  font-weight: 800;
 }
 
 .nav__items {
-    margin-left: 60px;
-    display: flex;
+  margin-left: 60px;
+  display: flex;
+  /* display: none; */
 }
 
 .nav__items li {
-    list-style: none;
-    padding: 16px 0px;
-    margin: 0px 20px;
+  list-style: none;
+  padding: 16px 0px;
+  margin: 0px 20px;
 }
 
 .nav__items li a {
-    text-decoration: none;
-    color: #0000009d;
-    font-size: 1em;
+  text-decoration: none;
+  color: #0000009d;
+  font-size: 1em;
 }
 
 .active {
-    font-weight: bold;
-    color: black;
+  font-weight: bold;
+  color: black;
 }
 
 .active__line {
-    height: 2px;
-    background-color: blueviolet;
-    border-radius: 10px;
+  height: 2px;
+  background-color: blueviolet;
+  border-radius: 10px;
 }
 
 .nav__left {
-    display: flex;
+  display: flex;
 }
 
 .nav__right {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .search__bar {
-    display: flex;
-    align-items: center;
-    border: 1px solid #00000044;
-    border-radius: 8px;
-    padding: 8px 0;
+  display: flex;
+  /* display: none; */
+  align-items: center;
+  border: 1px solid #00000044;
+  border-radius: 8px;
+  padding: 8px 0;
 }
 
 input {
-    border: none;
-    outline: none;
-    font-size: 1em;
-    margin-left: 16px;
-    width: 280px;
-}
-
-.search__icon,
-.notification__icon {
-    width: 20px;
-    opacity: 0.4;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
+  margin-left: 16px;
+  width: 280px;
+  background-color: transparent;
 }
 
 .search__icon {
-    margin-left: 12px;
+  width: 20px;
+  opacity: 0.4;
+}
+.notification__icon {
+  width: 24px;
+  opacity: 0.4;
+}
+
+.search__icon {
+  margin-left: 12px;
 }
 
 .avatar {
-    width: 32px;
-    border-radius: 50%;
+  width: 28px;
+  border-radius: 50%;
+}
+
+.ham {
+  width: 24px;
+  margin-left: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+.ham__menu {
+  display: none;
+  height: 100vh;
+  background-color: #ffffff;
+  width: 90%;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  margin-top: 0.04em;
+  /* border: 1px solid black; */
+  box-shadow: 1px 1px 5px #00000044;
+}
+
+.ham__searchBar {
+  display: flex;
+  margin: auto;
+  width: 300px;
+  margin-top: 4em;
+  /* display: none; */
+  align-items: center;
+  border: 1px solid #00000044;
+  border-radius: 8px;
+  padding: 8px 0;
+}
+
+.ham__list {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ham__menu ul li a {
+  text-decoration: none;
+  color: #0000009d;
+  font-size: 1.2em;
+  padding: 1em 0.5em;
+}
+
+.ham__menu ul li a:hover {
+  border-bottom: 2px solid blue;
+  font-weight: bold;
+  transition: 100ms;
+}
+
+.ham__menu ul li {
+  list-style: none;
+  margin: 1em 3em;
+  padding: 1em 3em;
+
+  /* background-color: aqua; */
+}
+
+.close {
+  width: 18px;
+  margin-left: 20px;
+  display: none;
+  cursor: pointer;
 }
 
 .notification__icon,
 .avatar {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .logo__icon {
-    width: 36px;
+  width: 36px;
 }
 
+/* @media screen and (max-width: 1200px) {
+  .search__bar {
+    display: none;
+  }
+
+  .nav__items {
+    display: none;
+  }
+
+  .ham {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .ham__menu {
+    display: none;
+  }
+
+  .ham {
+    display: none;
+  }
+} */

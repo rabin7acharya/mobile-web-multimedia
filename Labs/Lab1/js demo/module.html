@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module Marks</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+      }
+
+      body {
+        font-family: "Press Start 2P", cursive;
+        display: flex;
+        justify-content: center;
+        background-color: #191d23;
+        color: #fff;
+      }
+
+      .wrapper {
+        background-color: #1c2128;
+        margin-top: 5rem;
+        border: 1px solid #282e36;
+        width: 800px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.198);
+      }
+
+      .header {
+        padding: 1rem 2rem;
+        color: #4e95d0;
+        background-color: #282e36;
+      }
+
+      .table {
+        padding: 1rem 2rem;
+        margin-bottom: 1rem;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .table__header {
+        display: flex;
+        justify-content: space-between;
+        color: #ffff00;
+        padding: 1rem;
+      }
+
+      .table__footer {
+        display: flex;
+        gap: 30rem;
+        justify-content: flex-end;
+      }
+
+      .data {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 4rem;
+        gap: 15rem;
+        color: #7c7b82;
+      }
+
+      ul,
+      ol {
+        display: flex;
+        flex-direction: column;
+      }
+
+      ul > li {
+        list-style: none;
+      }
+
+      li {
+        padding: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">Result.exe</div>
+      <div class="table">
+        <div class="table__header">
+          <h2>S.N. Modules</h2>
+          <h2>Marks</h2>
+        </div>
+        <div class="data">
+          <ol class="modules">
+            <li class="module__name"></li>
+            <li class="module__name"></li>
+            <li class="module__name"></li>
+            <li class="module__name"></li>
+            <li class="module__name"></li>
+          </ol>
+          <ul class="marks">
+            <li class="mark"></li>
+            <li class="mark"></li>
+            <li class="mark"></li>
+            <li class="mark"></li>
+            <li class="mark"></li>
+          </ul>
+        </div>
+        <div class="table__footer">
+          <h2>Total</h2>
+          <h2 class="total__marks"></h2>
+        </div>
+        <div class="table__footer">
+          <h2>Percentage</h2>
+          <h2 id="percentage"></h2>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const modules = new Array(5);
+      const marks = new Array(5);
+      let arrTotal = new Array(5);
+      let total = 0;
+      let per = 0;
+
+      const module = document.querySelectorAll(".module__name");
+      const mark = document.querySelectorAll(".mark");
+      const total__marks = document.querySelector(".total__marks");
+      const percent = document.getElementById("percentage");
+
+      window.onload = function () {
+        for (i = 0; i < modules.length; i++) {
+          modules[i] = prompt("Enter Module Name: ");
+          marks[i] = prompt("Enter marks for " + modules[i]);
+          arrTotal[i] = parseInt(marks[i]);
+          total += arrTotal[i];
+        }
+        setData();
+        console.log("total: " + total);
+        console.log("percent: " + per);
+      };
+
+      function setData() {
+        for (i = 0; i < module.length; i++) {
+          module[i].innerHTML = modules[i];
+          mark[i].innerHTML = marks[i];
+          total__marks.innerHTML = total;
+        }
+        per = (total / 500) * 100;
+        percent.innerHTML = per + " %";
+      }
+    </script>
+  </body>
+</html>

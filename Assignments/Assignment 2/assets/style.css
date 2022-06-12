@@ -8,33 +8,44 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(109.73deg, #a2ffe8 0%, #c9c4ff 100%);
-    /* height: 100vh; */
+    /* background-image: url("https://w.wallhaven.cc/full/y8/wallhaven-y85yld.jpg"); */
+    background-image: linear-gradient(to right bottom, #ffc4c4, #fdc5d1, #f7c6dc, #eec9e7, #e3cdef, #d8d3f8, #cbd9fd, #c0dfff, #b5e9ff, #b0f2fe, #b3f9f6, #c0ffea);
+    
+    background-size: cover;
+
+    /* background: linear-gradient(109.73deg, #a2ffe8 0%, #7b69ff26 0%); */
+    height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
+    
 }
 
 .assignments {
     padding: 2rem;
     border-radius: 16px;
-    background: rgba(255, 255, 255, 0.3);
-    border: 1px solid #FFFFFF;
-    backdrop-filter: blur(76px);
+    background: rgba(255, 255, 255, 0.361);
+    border: 1px solid #ffffff;
+    backdrop-filter: blur(10px);
+    margin: 1rem 0;
+    font-size: 1em;
 }
 
 .tasks {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
-    border-top: 1px solid #fff;
+    border-top: 1px solid #ffffffc6;
     margin-top: 1rem;
-    padding-top: 3rem;
+    padding-top: 2rem;
 }
 
 .task {
-    background-color: #fff;
+    background: #ffffff0d;
+    backdrop-filter: blur(10px);
+    color: #308099;
     height: 140px;
     width: 360px;
     display: flex;
@@ -42,12 +53,19 @@ body {
     justify-content: space-evenly;
     padding: 0px 32px;
     border-radius: 8px;
+    filter: drop-shadow(1px 1px 39px rgba(25, 0, 255, 0.026));
+}
+
+.task-title {
+    font-weight: 500;
 }
 
 .header {
-    font-weight: bolder;
+    font-weight: 700;
     -webkit-text-fill-color: #3D8DA6;
-    font-size: 3em;
+    font-size: 1.2em;
+    margin-top: -50;
+    /* font-weight: 500; */
     /* -webkit-text-stroke: 1px#3D8DA6; */
     /* letter-spacing: 0.30em; */
 }
@@ -59,11 +77,16 @@ body {
 .btn {
     text-decoration: none;
     /* width: 64px; */
-    border-radius: 5px;
+    border-radius: 50px;
     display: flex;
     justify-content: space-between;
     padding: 0.4rem 1rem;
     align-items: center;
+}
+
+.btn:hover {
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.25);
+    transition: 300ms ease-in-out;
 }
 
 span {
@@ -77,6 +100,6 @@ span {
 
 .live {
     color: #fff;
-    background-color: #308099;
+    background: linear-gradient(109.73deg, #f98ecb 0%, #308099 100%);
     margin-right: 16px;
 }

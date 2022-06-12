@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- getResults(marks[])
+    check if any mark < 40 -> pass
+    else -> getTotal marks
+    percentage
+    division
+
+    display -> you are failed, passed, distintion, -->
+    <script>
+      const marks = [20, 60, 55, 89, 90];
+      let total = 0;
+      const arrTotal = new Array(marks.length);
+      for (i = 0; i < marks.length; i++) {
+        arrTotal[i] = parseInt(marks[i]);
+        total += arrTotal[i];
+
+        if (marks[i] < 40) {
+          console.log("you are failed");
+        } else if (marks[i] < 60) {
+          console.log("Division: 2nd");
+        } else {
+          console.log("you are passed");
+        }
+      }
+      console.log(total);
+
+      //   marks.forEach((mark) => {
+      //     if (mark < 40) {
+      //       console.log("you are failed");
+      //     }
+      //   });
+    </script>
+  </body>
+</html>

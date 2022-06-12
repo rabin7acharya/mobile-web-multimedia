@@ -1,61 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nav Bar</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
     <nav class="nav__bar">
-        <div class="nav__left">
-            <div class="logo">
-                <img src="./asstes/task-nav-logo.svg" alt="" class="logo__icon">
-                <h1 class="logo__text">workflow</h1>
-            </div>
-            
-            <ul class="nav__items">
-                <div class="link">
-                    <li class="active__link">
-                        <a class="active" href="#">Dashboard</a>
-                    </li>
-                    <div class="active__line"></div>
-                </div>
-                <div class="link">
-                    <li class="active__link">
-                        <a class="" href="#">Team</a>
-                    </li>
-                    <div class=""></div>
-                </div>
-                <div class="link">
-                    <li class="active__link">
-                        <a class="" href="#">Projects</a>
-                    </li>
-                    <div class=""></div>
-                </div>
-                <div class="link">
-                    <li class="active__link">
-                        <a class="" href="#">Calender</a>
-                    </li>
-                    <div class=""></div>
-                </div>
-                
-            </ul>
-
+      <div class="nav__left">
+        <div class="logo">
+          <img src="./asstes/task-nav-logo.svg" alt="" class="logo__icon" />
+          <h1 class="logo__text">workflow</h1>
         </div>
-        
-        <div class="nav__right">
-            <div class="search__bar">
-                <img class="search__icon" src="./asstes/task-nav-search.svg" alt="">
-                <input type="text" placeholder="Search">
-            </div>
-            <img src="./asstes/task-nav-bell-icon.svg" alt="" class="notification__icon">
-            <img src="./asstes/task-nav-user.png" alt="" class="avatar">
 
+        <!-- nav links -->
+        <ul class="nav__items">
+          <div class="link">
+            <li class="active__link">
+              <a class="active" href="#">Dashboard</a>
+            </li>
+            <div class="active__line"></div>
+          </div>
+          <div class="link">
+            <li class="active__link">
+              <a class="" href="#">Team</a>
+            </li>
+            <div class=""></div>
+          </div>
+          <div class="link">
+            <li class="active__link">
+              <a class="" href="#">Projects</a>
+            </li>
+            <div class=""></div>
+          </div>
+          <div class="link">
+            <li class="active__link">
+              <a class="" href="#">Calender</a>
+            </li>
+            <div class=""></div>
+          </div>
+        </ul>
+      </div>
+
+      <div class="nav__right">
+        <div class="search__bar">
+          <img class="search__icon" src="./asstes/task-nav-search.svg" alt="" />
+          <input type="text" placeholder="Search" />
         </div>
-        
-        
+        <img
+          src="./asstes/task-nav-bell-icon.svg"
+          alt=""
+          class="notification__icon"
+        />
+        <img src="./asstes/task-nav-user.png" alt="" class="avatar" />
+        <img src="./asstes/ham-menu.svg" alt="" class="ham" />
+        <img src="./asstes/close.svg" alt="" class="close" />
+      </div>
     </nav>
-</body>
+
+    <!-- ham-menu -->
+    <div class="ham__menu">
+      <!-- <img src="./asstes/close.svg" alt="" class="close" /> -->
+      <div class="ham__searchBar">
+        <img class="search__icon" src="./asstes/task-nav-search.svg" alt="" />
+        <input type="text" placeholder="Search" />
+      </div>
+      <ul class="ham__list">
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Calender</a></li>
+      </ul>
+    </div>
+    <script src="../../../Labs/Lab1/jQuery Projects/jQuery3.6.js"></script>
+    <script>
+      $(document).ready(function () {
+        checkLargeDevice();
+        checkSmallDevice();
+      });
+
+      $(window).resize(function () {
+        checkLargeDevice();
+        checkSmallDevice();
+      });
+
+      function checkSmallDevice() {
+        if ($(window).width() < 1150) {
+          $(".ham").show(100);
+          $(".search__bar").hide(100);
+          $(".nav__items").hide(100);
+          $(".close").hide(100);
+        }
+      }
+
+      function checkLargeDevice() {
+        if ($(window).width() > 1150) {
+          $(".ham").hide(100);
+          $(".ham__menu").hide(100);
+          $(".search__bar").show(100);
+          $(".nav__items").show(100);
+        }
+      }
+
+      $(".ham").click(function () {
+        $(".ham__menu").show(300);
+        $(".ham").hide();
+        $(".close").show();
+      });
+
+      $(".close").click(function () {
+        $(".ham").show();
+        $(".close").hide();
+        $(".ham__menu").hide(300);
+      });
+    </script>
+  </body>
 </html>
