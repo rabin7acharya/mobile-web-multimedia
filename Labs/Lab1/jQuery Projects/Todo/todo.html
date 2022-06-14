@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="header">My Todo App</h1>
+      <div class="add-todo">
+        <input
+          name="todo-text"
+          type="text"
+          class="todo-text"
+          placeholder="Type your Todo here.."
+        />
+        <input type="submit" class="submit" />
+      </div>
+
+      <ul class="todos">
+        <!-- <li class="todo">
+          <h2 class="todo-title">hey</h2>
+
+          <div class="btns">
+            <button class="btn completed">
+              <i class="fa-solid fa-check"></i>
+            </button>
+            <button class="btn delete">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+        </li> -->
+      </ul>
+    </div>
+    <script src="../jQuery3.6.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".submit").click(function () {
+          var todoTitle = $(".todo-text").val();
+
+          // console.log(todoTitle.text());
+
+          if ($(todoTitle) =+ "") {
+            alert("Please enter todo item to add!");
+          } else {
+            addTodoItem();
+          }
+
+          function addTodoItem() {
+            $(".todos").append(
+              $(
+                "<div class='todo'><h2 class='todo-title'>" +
+                  todoTitle +
+                  "</h2><div class='btns'><button class='btn completed'><i class='fa-solid fa-check'></i></button><button class='btn delete'><i class='fa-solid fa-xmark'></i></button></div></div>"
+              )
+            );
+          }
+
+          // function addTodoTitle() {
+          //   $(".todo").append(
+          //     $("<h2 class='todo-title'>" + todoTitle + "</h2>"),
+          //     $(
+          //       "<div class='btns'><button class='btn completed'><i class='fa-solid fa-check'></i></button><button class='btn delete'><i class='fa-solid fa-xmark'></i></button></div>"
+          //     )
+          //   );
+          // }
+          // addTodoTitle();
+
+          // $(".todo-title").text(todoTitle);
+        });
+      });
+    </script>
+  </body>
+</html>
