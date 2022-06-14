@@ -16,7 +16,7 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="header">My Todo App</h1>
+      <h1 class="header">Rabin's Todo App</h1>
       <div class="add-todo">
         <input
           name="todo-text"
@@ -32,10 +32,10 @@
           <h2 class="todo-title">hey</h2>
 
           <div class="btns">
-            <button class="btn completed">
+            <button class="completed">
               <i class="fa-solid fa-check"></i>
             </button>
-            <button class="btn delete">
+            <button class="delete">
               <i class="fa-solid fa-xmark"></i>
             </button>
           </div>
@@ -47,36 +47,34 @@
       $(document).ready(function () {
         $(".submit").click(function () {
           var todoTitle = $(".todo-text").val();
-
-          // console.log(todoTitle.text());
-
-          if ($(todoTitle) =+ "") {
+          if ($(todoTitle) == "") {
             alert("Please enter todo item to add!");
           } else {
             addTodoItem();
           }
 
           function addTodoItem() {
-            $(".todos").append(
-              $(
-                "<div class='todo'><h2 class='todo-title'>" +
-                  todoTitle +
-                  "</h2><div class='btns'><button class='btn completed'><i class='fa-solid fa-check'></i></button><button class='btn delete'><i class='fa-solid fa-xmark'></i></button></div></div>"
+            $(".todos")
+              .append(
+                $(
+                  "<div class='todo'><h2 class='todo-title'>" +
+                    todoTitle +
+                    "</h2><div class='btns'><button class='completed'><i class='fa-solid fa-check'></i></button><button class='delete'><i class='fa-solid fa-xmark'></i></button></div></div>"
+                )
               )
-            );
+              .fadeIn();
           }
 
-          // function addTodoTitle() {
-          //   $(".todo").append(
-          //     $("<h2 class='todo-title'>" + todoTitle + "</h2>"),
-          //     $(
-          //       "<div class='btns'><button class='btn completed'><i class='fa-solid fa-check'></i></button><button class='btn delete'><i class='fa-solid fa-xmark'></i></button></div>"
-          //     )
-          //   );
-          // }
-          // addTodoTitle();
+          $(".completed").click(function () {
+            $(this).parent().parent().css({
+              "text-decoration": "line-through",
+              opacity: "50%",
+            });
+          });
 
-          // $(".todo-title").text(todoTitle);
+          $(".delete").click(function () {
+            $(this).parent().parent().fadeOut();
+          });
         });
       });
     </script>
