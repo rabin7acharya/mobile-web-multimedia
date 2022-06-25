@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="landing">
+      <div class="loader"></div>
+      <h3 class="heading__text">FEATURED PRODUCTS</h3>
+      <div class="wrapper"></div>
+      <button class="show__more-btn">Show More</button>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var skip = 0;
+      var limit = 10;
+      $(document).ready(function () {
+        loadMore();
+        $(".show__more-btn").click(function () {
+          loadMore(skip);
+        });
+        function loadMore() {
+          $.get(
+            "https://dummyjson.com/products?limit=" + limit + "&skip=" + skip,
+            function (data, status) {
+              // console.log(data.products);
+
+              for (product of data.products) {
+                $(".wrapper").append(
+                  "<div class='card'><img src='" +
+                    product.thumbnail +
+                    "' alt='' class='product__img' /><h4 class='name'>" +
+                    product.title +
+                    "</h4><div class='info'><p class='description'>" +
+                    product.description +
+                    "</p><div class='spans'><p class='price'>$" +
+                    product.price +
+                    "</p><p class='rating'>⭐" +
+                    product.rating +
+                    "</p></div></div><button class='add'>Add to Cart</button></div>"
+                );
+              }
+
+              if (skip < data.total - limit) {
+                skip += limit;
+              } else {
+                $(".show__more-btn").hide();
+              }
+            }
+          );
+        }
+      });
+    </script>
+  </body>
+</html>

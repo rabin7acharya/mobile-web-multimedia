@@ -47,22 +47,20 @@
       $(document).ready(function () {
         $(".submit").click(function () {
           var todoTitle = $(".todo-text").val();
-          if ($(todoTitle) == "") {
+          if (event.key == "") {
             alert("Please enter todo item to add!");
           } else {
             addTodoItem();
           }
 
           function addTodoItem() {
-            $(".todos")
-              .append(
-                $(
-                  "<div class='todo'><h2 class='todo-title'>" +
-                    todoTitle +
-                    "</h2><div class='btns'><button class='completed'><i class='fa-solid fa-check'></i></button><button class='delete'><i class='fa-solid fa-xmark'></i></button></div></div>"
-                )
+            $(".todos").append(
+              $(
+                "<div class='todo'><h2 class='todo-title'>" +
+                  todoTitle +
+                  "</h2><div class='btns'><button class='completed'><i class='fa-solid fa-check'></i></button><button class='delete'><i class='fa-solid fa-xmark'></i></button></div></div>"
               )
-              .fadeIn();
+            );
           }
 
           $(".completed").click(function () {
