@@ -1,4 +1,4 @@
-const assignment = [
+const assignments = [
   {
     //1
     title: "My Portfolio",
@@ -29,39 +29,28 @@ const assignment = [
     live: "./Assignments/Assignment 2/nav-bar/index.html",
     code: "https://github.com/rabin7acharya/mobile-web-multimedia/tree/main/Assignments/Assignment%202/nav-bar",
   },
+  {
+    //5
+    title: "Rabin's Todo App",
+    live: "./Assignments/Assignment 2/nav-bar/index.html",
+    code: "https://github.com/rabin7acharya/mobile-web-multimedia/tree/main/Assignments/Assignment%202/nav-bar",
+  },
 ];
 
-const title = document.querySelectorAll(".task-title");
-const live = document.querySelectorAll(".live");
-const code = document.querySelectorAll(".code");
-console.log(code);
-
-function setTitle() {
-  title[0].innerHTML = assignment[0].title;
-  title[1].innerHTML = assignment[1].title;
-  title[2].innerHTML = assignment[2].title;
-  title[3].innerHTML = assignment[3].title;
-  title[4].innerHTML = assignment[4].title;
+function loader() {
+  assignments.map((assignment) => {
+    $(".tasks").append(
+      "<div class='task'><h3 class='task-title'>" +
+        assignment.title +
+        "</h3><div class='buttons'><a href=" +
+        assignment.live +
+        "target='_blank' class='live btn'>Live<span><img src='./Assignments/Assignment 2/assets/live.svg' alt='Live Preview' /></span></a><a href=" +
+        assignment.code +
+        " target='_blank' class='code btn'>Code<span><img src='./Assignments/Assignment 2/assets/code.svg' /></span></a></div></div>"
+    );
+  });
 }
 
-function setLive() {
-  live[0].href = assignment[0].live;
-  live[1].href = assignment[1].live;
-  live[2].href = assignment[2].live;
-  live[3].href = assignment[3].live;
-  live[4].href = assignment[4].live;
-}
-
-function setCode() {
-  code[0].href = assignment[0].code;
-  code[1].href = assignment[1].code;
-  code[2].href = assignment[2].code;
-  code[3].href = assignment[3].code;
-  code[4].href = assignment[4].code;
-}
-
-window.onload = (event) => {
-  setTitle();
-  setLive();
-  setCode();
+window.onload = () => {
+  loader();
 };
