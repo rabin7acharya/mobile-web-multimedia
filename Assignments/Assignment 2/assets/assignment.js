@@ -45,7 +45,7 @@ const assignments = [
     //5
     title: "Movie Ticketing Project Wireframes",
     live: "https://www.figma.com/file/xZh9hPDq1jT3USD562qNwj/Movie-Ticketing-App-Wireframe?node-id=0%3A1",
-    code: "https://github.com/rabin7acharya/mobile-web-multimedia/tree/main/Labs/jQuery%20Projects/ajax%20demo",
+    code: "https://github.com/rabin7acharya/mobile-web-multimedia/tree/main/Assignments/Assignment%203/Movie%20Ticketing%20App%20Wireframes",
   },
 ];
 
