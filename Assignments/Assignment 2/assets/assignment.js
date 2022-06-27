@@ -2,13 +2,13 @@ const assignments = [
   {
     //1
     title: "My Portfolio",
-    live: "./Assignments/Assignment 2/404 Page not found/404page.html",
+    live: "/Assignments/Assignment 2/404 Page not found/404page.html",
     code: "https://bit.ly/3x4ZypE",
   },
   {
     //2
     title: "Error 404",
-    live: "./Assignments/Assignment 2/404 Page not found/404page.html",
+    live: "/Assignments/Assignment 2/404 Page not found/404page.html",
     code: "https://bit.ly/3x4ZypE",
   },
   {
@@ -32,7 +32,7 @@ const assignments = [
   {
     //5
     title: "Rabin's Todo App",
-    live: "./Assignments/Assignment 2/nav-bar/index.html",
+    live: "./Labs/jQuery Projects/Todo/todo.html",
     code: "https://github.com/rabin7acharya/mobile-web-multimedia/tree/main/Assignments/Assignment%202/nav-bar",
   },
 ];
@@ -42,9 +42,9 @@ function loader() {
     $(".tasks").append(
       "<div class='task'><h3 class='task-title'>" +
         assignment.title +
-        "</h3><div class='buttons'><a href=" +
+        "</h3><div class='buttons'><a href='" +
         assignment.live +
-        "target='_blank' class='live btn'>Live<span><img src='./Assignments/Assignment 2/assets/live.svg' alt='Live Preview' /></span></a><a href=" +
+        "' target='_blank' class='live btn'>Live<span><img src='./Assignments/Assignment 2/assets/live.svg' alt='Live Preview' /></span></a><a href=" +
         assignment.code +
         " target='_blank' class='code btn'>Code<span><img src='./Assignments/Assignment 2/assets/code.svg' /></span></a></div></div>"
     );
