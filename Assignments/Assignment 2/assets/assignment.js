@@ -2,14 +2,14 @@ const assignments = [
   {
     //1
     title: "My Portfolio",
-    live: "/Assignments/Assignment 2/404 Page not found/404page.html",
-    code: "https://bit.ly/3x4ZypE",
+    live: "https://rabinacharya7.com.np",
+    code: "https://github.com/rabin7acharya/myPortfolio",
   },
   {
     //2
     title: "Error 404",
     live: "/Assignments/Assignment 2/404 Page not found/404page.html",
-    code: "https://bit.ly/3x4ZypE",
+    code: "https://github.com/rabin7acharya/mobile-web-multimedia/tree/main/Assignments/Assignment%202/404%20Page%20not%20found",
   },
   {
     //3
@@ -33,7 +33,19 @@ const assignments = [
     //5
     title: "Rabin's Todo App",
     live: "./Labs/jQuery Projects/Todo/todo.html",
-    code: "https://github.com/rabin7acharya/mobile-web-multimedia/tree/main/Assignments/Assignment%202/nav-bar",
+    code: "https://github.com/rabin7acharya/mobile-web-multimedia/tree/main/Labs/jQuery%20Projects/Todo",
+  },
+  {
+    //5
+    title: "Ajax Demo using API",
+    live: "./Labs/jQuery Projects/ajax demo/product.html",
+    code: "https://github.com/rabin7acharya/mobile-web-multimedia/tree/main/Labs/jQuery%20Projects/ajax%20demo",
+  },
+  {
+    //5
+    title: "Movie Ticketing Project Wireframes",
+    live: "https://www.figma.com/file/xZh9hPDq1jT3USD562qNwj/Movie-Ticketing-App-Wireframe?node-id=0%3A1",
+    code: "https://github.com/rabin7acharya/mobile-web-multimedia/tree/main/Labs/jQuery%20Projects/ajax%20demo",
   },
 ];
 
