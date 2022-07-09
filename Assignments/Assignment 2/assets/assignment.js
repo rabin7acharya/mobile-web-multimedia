@@ -43,9 +43,15 @@ const assignments = [
   },
   {
     //5
-    title: "Movie Ticketing Project Wireframes",
+    title: "OnScape: Movie Ticketing Project Wireframes",
     live: "https://www.figma.com/file/xZh9hPDq1jT3USD562qNwj/Movie-Ticketing-App-Wireframe?node-id=0%3A1",
     code: "https://github.com/rabin7acharya/mobile-web-multimedia/tree/main/Assignments/Assignment%203/Movie%20Ticketing%20App%20Wireframes",
+  },
+  {
+    //5
+    title: "OnScape: Movie Ticketing Project Demo",
+    live: "https://rabin7acharya.github.io/OnScape-Movie-Ticketing-App/",
+    code: "https://github.com/rabin7acharya/OnScape-Movie-Ticketing-App",
   },
 ];
 
